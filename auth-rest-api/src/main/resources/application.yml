@@ -4,28 +4,23 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/****
-    username: ****
-    password: ****
+    username: pguser
+    password: start123
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: validate
-      default_schema: *****
+      default_schema: auth_schema
     show-sql: false
     properties:
       hibernate:
-        default_schema: ****
+        default_schema: auth_schema
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
   flyway:
-    enabled: true
-    baseline-on-migrate: true
-    schemas: ****
-    default-schema: ****
-    create-schemas: true
-    locations: classpath:db/migration
+    enabled: false
 
   mail:
     host: smtp.gmail.com
