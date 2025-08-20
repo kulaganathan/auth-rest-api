@@ -3,19 +3,19 @@ spring:
     name: auth-server
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/****
-    username: pguser
-    password: start123
+    url: ${AUTH_DB_URL}
+    username: ${AUTH_DB_USER}
+    password: ${AUTH_DB_PWD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: validate
-      default_schema: auth_schema
+      default_schema: ${AUTH_DB_SCHEMA}
     show-sql: false
     properties:
       hibernate:
-        default_schema: auth_schema
+        default_schema: ${AUTH_DB_SCHEMA}
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 

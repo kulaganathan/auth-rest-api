@@ -173,3 +173,4 @@ temp/
 # Local configuration files
 application-local.yml
 application-local.properties
+.env

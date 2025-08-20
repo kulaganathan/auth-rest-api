@@ -17,13 +17,7 @@
     <name>auth-rest-api</name>
     <description>Centralized Authentication Server with OAuth 2.1 and OpenID Connect</description>
 
-    <properties>
-        <java.version>${java.version}</java.version>
-        <spring-authorization-server.version>${spring-authorization-server.version}</spring-authorization-server.version>
-        <jjwt.version>${jjwt.version}</jjwt.version>
-        <springdoc.version>${springdoc.version}</springdoc.version>
-        <postgresql.version>${postgresql.version}</postgresql.version>
-    </properties>
+    <!-- Inherit versions from parent dependencyManagement; only use parent properties directly in dependencies below. -->
 
     <dependencies>
         <!-- Spring Boot Starters -->
@@ -71,18 +65,18 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-impl</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-            <version>0.11.5</version>
+            <version>${jjwt.version}</version>
             <scope>runtime</scope>
         </dependency>
 
